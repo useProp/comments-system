@@ -9,6 +9,10 @@ class PostsService {
   getPosts = () => {
     return this.httpService.request(this.baseUrl);
   }
+
+  getPost = (id) => {
+    return this.httpService.request(`${this.baseUrl}/${id}`);
+  }
 }
 
 export default new PostsService();
